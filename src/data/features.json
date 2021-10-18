@@ -1,0 +1,17 @@
+[
+    { 
+        "title": "Service 1",
+        "description": "The only time you should move your vehicles after you get in a wreck is if not doing",
+        "link": "/services"
+    },
+    { 
+        "title": "Service 2",
+        "description": "The reason you want your cars to remain where they are as closely as possible",
+        "link": "/services"
+    },
+    { 
+        "title": "Services 3",
+        "description": "Allowing word-of-mouth reporting from the other driver may not be the best idea",
+        "link": "/services"
+    }
+]

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GatsbyImage } from "gatsby-plugin-image";
 
-const Clients = () => {
+const Technologies = () => {
     const data = useStaticQuery(graphql`
     query {
         allFile(
@@ -28,8 +28,8 @@ const Clients = () => {
     `);
 
     return (
-        <ClientsWrapper>
-            <ClientsLogos>
+        <TechsWrapper>
+            <TechsLogos>
                 <ul>
                     {data.allFile.edges.map((item, index) => (
                         <li key={index}>
@@ -37,23 +37,23 @@ const Clients = () => {
                         </li>
                     ))}
                 </ul>
-            </ClientsLogos>
-        </ClientsWrapper>
+            </TechsLogos>
+        </TechsWrapper>
     )
 }
 
-export default Clients
+export default Technologies
 
-const ClientsWrapper = styled.div`
+const TechsWrapper = styled.div`
     width: 100%;
     margin: 0 auto;
-    padding: 0.5rem calc((100vw - 1300px) / 2);
+    padding: 2.5rem calc((100vw - 1300px) / 2);
     background: #c1c4ce;
     box-shadow: 0 15px 30px rgb(0 0 0 / 10%), 0 8px 30px rgb(0 0 0 / 10%);
     margin-bottom: 60px;
 `;
 
-const ClientsLogos = styled.div`
+const TechsLogos = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -94,5 +94,5 @@ const ClientsLogos = styled.div`
 `;
 
 const Images = styled(GatsbyImage)`
-    max-width: 60px;
+    max-width: 40px;
 `;

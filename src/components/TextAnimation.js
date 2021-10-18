@@ -76,6 +76,10 @@ const TextAnimationWrapper = styled.span`
     height: 100%;
     cursor: pointer;
 
+    @media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
+        display: none;
+    }
+
     p {
         margin-right: .5rem;
     }

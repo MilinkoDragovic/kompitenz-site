@@ -6,13 +6,15 @@ import Seo from "../components/seo"
 import Testimonials from "../components/Testimonials"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
-import Clients from "../components/Clients"
+import Techonologies from "../components/Technologies"
+import FeatureServices from "../components/FeatureServices"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Hero />
-    <Clients />
+    <FeatureServices />
+    <Techonologies />
     <HomeServiceSection heading="Our Services" />
     <Testimonials />
     <Stats />
