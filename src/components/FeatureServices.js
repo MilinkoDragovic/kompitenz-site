@@ -86,6 +86,7 @@ const FeatureServiceContentBox = styled.div`
         background: ${({ theme }) => theme.colors.primary};
         transform: translateY(-20px);
         position: relative;
+        z-index: 100;
 
         &:before {
             content: "";
