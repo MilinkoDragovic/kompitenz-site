@@ -1,0 +1,26 @@
+[
+    {
+        "img": "../assets/images/service-1.jpg",
+        "alt": "Beratung",
+        "name": "Beratung",
+        "button": "Weiterlesen"
+    },
+    {
+        "img": "../assets/images/service-2.jpg",
+        "alt": "Web und mobile design",
+        "name": "Web und mobile design",
+        "button": "Weiterlesen"
+    },
+    {
+        "img": "../assets/images/service-3.jpg",
+        "alt": "Programmierung",
+        "name": "Programmierung",
+        "button": "Weiterlesen"
+    },
+    {
+        "img": "../assets/images/service-4.jpg",
+        "alt": "Support",
+        "name": "Support",
+        "button": "Weiterlesen"
+    }
+]
