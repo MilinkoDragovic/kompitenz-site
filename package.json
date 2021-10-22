@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.1",
     "@fontsource/poppins": "^4.5.0",
     "@use-it/interval": "^1.0.0",
     "babel-plugin-styled-components": "^1.13.3",
@@ -16,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-styled-components": "^5.0.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-json": "^4.0.0",
     "gatsby-transformer-sharp": "^4.0.0",

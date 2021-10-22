@@ -37,8 +37,10 @@ const HomeFeatureWidget = () => {
                     <div className="col-12">
                         <div className="section-title">
                             <span>03</span>
-                            <h2>features</h2>
-                            <h6>You should at least attempt to protect thehowever you can.</h6>
+                            <h2><strong>Ihr (digitales)</strong> Geschäftsmodell</h2>
+                            <h6>
+                                Der strategische Einsatz von IT ist ein elementarer Erfolgsfaktor. Welche Geschäftsprozesse lassen sich mit standardisierter Software noch wirtschaftlich nutzen und in welchen Geschäftsbereichen ist eine individuelle Softwarelösung zwingend notwendig, um Wettbewerbsvorteile zu sichern?
+                            </h6>
                         </div>
                     </div>
 
@@ -90,7 +92,7 @@ const HomeFeatureWidgetWrapper = styled.div`
 
 const HomeFeatureWidgetBox = styled.div`
     flex: 1;
-    margin-right: 40px;
+    margin-right: 1rem;
 
     &:last-of-type {
         margin-right: 0;
@@ -100,7 +102,7 @@ const HomeFeatureWidgetBox = styled.div`
 
 const BoxFlipInner = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     position: absolute;
     left: 0;
@@ -155,6 +157,18 @@ const HomeFeatureWidgetBoxFlipFront = styled.div`
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
+
+    ${BoxFlipInner} {
+        justify-content: space-between;
+        padding: 0 .2rem;
+
+        h4 {
+            color: ${({ theme }) => theme.colors.text};
+            line-height: 1.4;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+    }
 `;
 
 const HomeFeatureWidgetBoxFlipBack = styled.div`
@@ -162,7 +176,7 @@ const HomeFeatureWidgetBoxFlipBack = styled.div`
     height: 250px;
     float: left;
     box-shadow: 0 0 50px rgb(0 0 0 / 10%);
-    background: #405089;
+    background: ${({ theme }) => theme.colors.primary};
     color: #fff;
 
     ${BoxFlipInner} {
@@ -172,8 +186,13 @@ const HomeFeatureWidgetBoxFlipBack = styled.div`
         top: 50%;
         padding: 0 15px;
 
+        h4 {
+            color: ${({ theme }) => theme.colors.white};
+        }
+
         p {
             font-size: .8rem;
+            line-height: 1.6;
         }
     }
 `;
@@ -216,7 +235,7 @@ const HomeFeatureWidgetBoxFlip = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background: #485cc7;
+        background: ${({ theme }) => theme.colors.primary};
         -ms-transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);

@@ -20,7 +20,8 @@ export const theme = {
         background: '#ffffff',
         primary: '#945b8e',
         secondary: '#664563',
-        gray: '#dddddd'
+        gray: '#dddddd',
+        dark_pink: '#7a4a75'
       },
   }
 
@@ -32,7 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html, body {
-        font-family: "Poppins";
+        font-family: "Open Sans";
         font-size: ${({ theme }) => theme.fontSize.base};
         color: ${({ theme }) => theme.colors.text};
         scroll-behavior: smooth;
@@ -93,20 +94,27 @@ export const GlobalStyle = createGlobalStyle`
             display: block;
             font-size: 18px;
             font-weight: 800;
+            margin-bottom: 15px;
+            color: ${({ theme }) => theme.colors.dark_pink}
         }
 
         h2 {
             display: block;
-            font-weight: 700;
-            color: #f65935;
-            margin-bottom: 20px;
-            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Poppins";
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: ${({ theme }) => theme.colors.text};
+
+            strong {
+                color: #e0e0e0;
+            }
         }
 
         h6 {
-            font-size: 19px;
-            color: #9aa0ae;
-            line-height: 30px;
+            font-size: 1rem;
+            color: #999999;
+            line-height: 1.6;
             margin-bottom: 0;
         }
     }
