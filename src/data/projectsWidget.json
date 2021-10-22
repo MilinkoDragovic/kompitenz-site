@@ -1,0 +1,22 @@
+[
+    { 
+        "title": "Mein Buchprojekt",
+        "description": "Die digitale Revolution des Selfpublishing-Marktes startet!",
+        "image": "../assets/images/projects/mbpbg.png"
+    },
+    { 
+        "title": "United Agro Alliance",
+        "description": "Mehr Transparenz im Kakaohandel.",
+        "image": "../assets/images/projects/cocoabg.png"
+    },
+    { 
+        "title": "LateralCareer",
+        "description": "Karriereoptionen für Juristen.",
+        "image": "../assets/images/projects/lateralbg.png"
+    },
+    { 
+        "title": "Certis Personalservice",
+        "description": "Die digitale Revolution des Selfpublishing-Marktes startet! ",
+        "image": "../assets/images/projects/certisbg.png"
+    }
+]

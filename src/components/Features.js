@@ -1,11 +1,7 @@
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from 'react';
 import styled from 'styled-components';
-import { AiOutlinePlayCircle } from 'react-icons/ai';
-import { RiCustomerService2Fill } from 'react-icons/ri';
-import { GrOptimize } from 'react-icons/gr';
-
 
 const HomeFeatureWidget = () => {
     const data = useStaticQuery(graphql`
@@ -53,7 +49,7 @@ const HomeFeatureWidget = () => {
                                             <span>0{index}</span>
                                             <h4>{item.node.title}</h4>
                                             <BoxFlipIcon>
-                                                <BoxFlipIconImage image={item.node.image.childImageSharp.gatsbyImageData} alt={item.node.alt} />
+                                                <BoxFlipIconImage image={item.node.image.childImageSharp.gatsbyImageData} alt={item.node.title} />
                                             </BoxFlipIcon>
                                         </BoxFlipInner>
                                     </HomeFeatureWidgetBoxFlipFront>

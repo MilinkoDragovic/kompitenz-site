@@ -12,16 +12,16 @@
     { 
         "title": "Höchste Flexibilität",
         "description": "Spezifische Anforderungen erfordern individuelle Softwarelösungen. Die IT muss sich dem Geschäftsprozess anpassen und nicht umgekehrt. Änderungen und Erweiterungen werden maßgeschneidert und werden sehr schnell umgesetzt. Keine Kompromisse und höchste Flexibilität für Ihre wichtigsten Geschäftsprozesse!",
-        "image": "../assets/images/features/service-3.png"
+        "image": "../assets/images/features/service-4.png"
     },
     { 
         "title": "Schnelle Kostenamortisation",
         "description": "Individuelle Softwarelösungen amortisieren sich stets in einem kurzen Zeitraum. Der Einsatz der richtigen Softwarekomponenten stellt sicher, dass die einzusetzende Individualsoftware perfekt auf Sie und Ihre Umgebung abgestimmt ist.",
-        "image": "../assets/images/features/service-4.png"
+        "image": "../assets/images/features/service-5.png"
     },
     { 
         "title": "Gesetzliche Regelungen & Vorgaben Beachten",
         "description": "Der Austausch digitalisierter Informationen und Daten nimmt immer stärker zu. Wie gehen Sie mit personenbezogenen Daten um (Datenschutz / DSGVO)? Was unternehmen Sie in Bezug auf IT Sicherheit? Wie stellen Sie die Integrität, Vertraulichkeit und Verfügbarkeit der Daten sicher?",
-        "image": "../assets/images/features/service-5.png"
+        "image": "../assets/images/features/service-3.png"
     }
 ]
