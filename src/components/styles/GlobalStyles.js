@@ -15,9 +15,11 @@ export const theme = {
         '6xl': '4rem',
       },
       colors: {
-        text: '#000',
-        background: '#fff',
+        text: '#000000',
+        white: '#ffffff',
+        background: '#ffffff',
         primary: '#945b8e',
+        secondary: '#664563',
         gray: '#dddddd'
       },
   }

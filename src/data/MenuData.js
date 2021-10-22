@@ -1,22 +1,22 @@
 export const menuData = [
     { 
-        title: "Home",
+        title: "Unternehmen",
         link: "/"
     },
     { 
-        title: "About",
-        link: "/about"
-    },
-    { 
-        title: "Services",
+        title: "Wieso Kompitenz",
         link: "/services"
     },
     { 
-        title: "Projects",
+        title: "Leistungen",
+        link: "/services"
+    },
+    { 
+        title: "Referenzen",
         link: "/projects"
     },
     { 
-        title: "Contact",
+        title: "Kontakt",
         link: "/contact"
     }
 ];

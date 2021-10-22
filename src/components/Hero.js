@@ -11,10 +11,10 @@ const Hero = () => {
             </HeroBg>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1>Web Deveolopment</HeroH1>
-                    <HeroP>Out of this worlds</HeroP>
-                    <Button primary="true" round="true" big="true" to="/contact">
-                        Contact us
+                    <HeroH1>Individuelle softwareentwicklung "State of the art"!</HeroH1>
+                    <HeroP>Fit für das digitale Zeitalter? Wir programmieren maßgeschneiderte Softwarelösungen für Ihr Unternehmen</HeroP>
+                    <Button primary="true" big="true" to="/contact">
+                        Kontaktiere uns
                     </Button>
                 </HeroItems>
             </HeroContent>
@@ -28,12 +28,11 @@ const HeroContainer = styled.div`
     background: #0c0c0c;
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     align-items: center;
     height: calc(100vh + 80px);
     padding: 0 1rem;
     position: relative;
-    margin-top: -80px;
 
     &:before {
         content: "";
@@ -78,7 +77,7 @@ const HeroContent = styled.div`
     z-index: 3;
     height: calc(100vh - 80px);
     max-height: 100%;
-    padding: 0rem calc((100vw - 1300px) / 2);
+    padding: 0rem calc((100vw - 900px) / 2);
 `;
 
 const HeroItems = styled.div`
@@ -91,19 +90,19 @@ const HeroItems = styled.div`
     max-height: 100%;
     padding: 0;
     color: #fff;
-    line-height: 1.1;
+    line-height: 1.4;
     font-weight: bold;
 `;
 
 const HeroH1 = styled.h1`
-    font-size: clamp(1.5rem, 6vw, 3rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-bottom: 2rem;
     letter-spacing: 2px;
     padding: 0 1rem;
 `;
 
 const HeroP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     margin-bottom: 2rem;
     font-weight: 400;
 `;
