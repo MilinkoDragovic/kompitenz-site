@@ -10,6 +10,7 @@ import Techonologies from "../components/Technologies"
 import FeatureServices from "../components/FeatureServices"
 import HeroSlider from "../components/HeroSlider"
 import SideImage from "../components/SideImageContent"
+import FeaturesWidget from "../components/Features"
 
 const IndexPage = () => (
   <Layout>
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <Techonologies />
     <HomeServiceSection heading="Our Services" />
     <SideImage />
+    <FeaturesWidget />
     <Testimonials />
     <Stats />
     <Email />
