@@ -21,7 +21,8 @@ export const theme = {
         primary: '#945b8e',
         secondary: '#664563',
         gray: '#dddddd',
-        dark_pink: '#7a4a75'
+        dark_pink: '#7a4a75',
+        paragraph: '#9aa0ae'
       },
   }
 
@@ -106,6 +107,11 @@ export const GlobalStyle = createGlobalStyle`
         vertical-align: middle;
         border-style: none;
         max-width: 100%;
+    }
+
+    p {
+        line-height: 1.5;
+        color:  ${({ theme }) => theme.colors.paragraph};
     }
 
     .row {

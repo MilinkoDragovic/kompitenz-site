@@ -189,6 +189,7 @@ const HomeFeatureWidgetBoxFlipBack = styled.div`
         p {
             font-size: .8rem;
             line-height: 1.6;
+            color: ${({ theme }) => theme.colors.white};
         }
     }
 `;

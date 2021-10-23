@@ -1,6 +1,6 @@
 import * as React from "react"
 import Hero from "../components/Hero"
-import HomeServiceSection from "../components/HomeServiceSection"
+import Development from "../components/Development"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Testimonials from "../components/Testimonials"
@@ -20,7 +20,7 @@ const IndexPage = () => (
     <HeroSlider />
     <FeatureServices />
     <Techonologies />
-    <HomeServiceSection heading="Our Services" />
+    <Development heading="Our Services" />
     <SideImage />
     <FeaturesWidget />
     <ProjectsWidget />

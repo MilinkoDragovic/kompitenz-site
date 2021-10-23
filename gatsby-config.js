@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `LogicLab`,
+    title: `Kompitenz`,
     description: `Wir sind ein dynamisches und innovatives Unternehmen, das sich den Herausforderungen des digitalen Wandels stellt und Sie bei der Transformation vollumfänglich begleitet.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,

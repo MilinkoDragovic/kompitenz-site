@@ -16,7 +16,7 @@ const Technologies = () => {
                         base
                         childImageSharp {
                             gatsbyImageData(
-                                width: 100
+                                width: 150
                                 transformOptions: {grayscale: true}
                                 formats: [AUTO, WEBP, AVIF]
                             )
@@ -47,7 +47,7 @@ export default Technologies
 const TechsWrapper = styled.div`
     width: 100%;
     margin: 0 auto;
-    padding: 2.5rem calc((100vw - 1300px) / 2);
+    padding: 4rem calc((100vw - 1300px) / 2);
     background: #c1c4ce;
     box-shadow: 0 15px 30px rgb(0 0 0 / 10%), 0 8px 30px rgb(0 0 0 / 10%);
     margin-bottom: 60px;
@@ -94,5 +94,5 @@ const TechsLogos = styled.div`
 `;
 
 const Images = styled(GatsbyImage)`
-    max-width: 40px;
+    max-width: 60px;
 `;

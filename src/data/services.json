@@ -1,26 +1,30 @@
 [
     {
-        "img": "../assets/images/service-1.jpg",
-        "alt": "Beratung",
-        "name": "Beratung",
+        "img": "../assets/images/kompitenz-development-software.jpg",
+        "alt": "Individuelle Softwareentwicklung",
+        "name": "Softwareentwicklung",
+        "description": "Für komplexe und aufwendige Anforderungen (bzw. Prozesse) entwickeln wir ganz individuelle und auf ihre technologische...",
         "button": "Weiterlesen"
     },
     {
-        "img": "../assets/images/service-2.jpg",
-        "alt": "Web und mobile design",
-        "name": "Web und mobile design",
+        "img": "../assets/images/kompitenz-development-web-development.jpg",
+        "alt": "Webentwicklung",
+        "name": "Webentwicklung",
+        "description": "Einer unserer Schwerpunkte ist die Umsetzung von webbasierten Anwendungen, die auf dem Laravel Framework basieren...",
         "button": "Weiterlesen"
     },
     {
-        "img": "../assets/images/service-3.jpg",
-        "alt": "Programmierung",
-        "name": "Programmierung",
+        "img": "../assets/images/kompitenz-development-mobile-apps.jpg",
+        "alt": "Mobile Apps",
+        "name": "Mobile Apps",
+        "description": "Die Aufrufe von Webseiten und -applikationen via Smartphone / Tablet gehören heute bereits zum Geschäftsalltag...",
         "button": "Weiterlesen"
     },
     {
-        "img": "../assets/images/service-4.jpg",
-        "alt": "Support",
-        "name": "Support",
+        "img": "../assets/images/kompitenz-development-api.jpg",
+        "alt": "API / Schinittstellen",
+        "name": "API / Schinittstellen",
+        "description": "Die Koppelung von Systemen oder Integration von externen Datenquellen wird immer häufiger in Form von APIs realisiert...",
         "button": "Weiterlesen"
     }
 ]
