@@ -1,28 +1,28 @@
 [
     {
-        "title": "Web and Mobile application",
-        "label": "Web Technology",
-        "image": "../assets/images/slider/hero-1.jpg",
+        "title": "Beratung",
+        "label": "Zielführende und praxisbezogene beratung",
+        "image": "../assets/images/slider/hero-4.jpg",
         "alt": "Web tech",
         "path": "/services"
     },
     {
-        "title": "Desktop Application for Windows and MacOS",
-        "label": "Desktop Technology",
-        "image": "../assets/images/slider/hero-2.jpg",
+        "title": "Web and mobile design",
+        "label": "Programmierung an ihren anforderungen ausgerichtet",
+        "image": "../assets/images/slider/hero-4.jpg",
         "alt": "Desktop tech",
         "path": "/services"
     },
     {
-        "title": "Food Digital Technology",
-        "label": "Food Technology",
-        "image": "../assets/images/slider/hero-3.jpg",
+        "title": "Programmierung",
+        "label": "Ihr design in transparenten schritten implementieren",
+        "image": "../assets/images/slider/hero-4.jpg",
         "alt": "Food tech",
         "path": "/services"
     },
     {
-        "title": "CMS, SPA, PWA and SSR Application",
-        "label": "CMS Technology",
+        "title": "Support",
+        "label": "Garantiert ihnen einen sorgenfreien betrieb",
         "image": "../assets/images/slider/hero-4.jpg",
         "alt": "CMS tech",
         "path": "/services"

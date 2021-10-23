@@ -8,10 +8,10 @@ import "swiper/css";
 import "swiper/css/navigation"
 
 import SwiperCore, {
-    Navigation, Mousewheel, Keyboard
+    Navigation, Mousewheel, Keyboard, Autoplay
   } from 'swiper';
   
-SwiperCore.use([Navigation,Mousewheel,Keyboard]);
+SwiperCore.use([Navigation,Mousewheel,Keyboard, Autoplay]);
 
 const HomeProjectsWidget = () => {
     const data = useStaticQuery(graphql`
@@ -50,7 +50,10 @@ const HomeProjectsWidget = () => {
                         </div>
                     </div>
                     <div className="col-lg-8">
-                        <Swiper slidesPerView={3} navigation={true} spaceBetween={20} centeredSlides={true}
+                        <Swiper autoplay={{
+                            "delay": 2500,
+                            "disableOnInteraction": false
+                            }} slidesPerView={3} navigation={true} spaceBetween={20} centeredSlides={true}
                             className="mySwiper">
                                 {data.allProjectsWidgetJson.edges.map((item, index) => (
                                      <SwiperSlide>

@@ -5,6 +5,7 @@ export const theme = {
     fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',
+        md: '0.925rem',
         base: '1rem',
         lg: '1.125rem',
         xl: '1.25rem',
@@ -133,24 +134,92 @@ export const GlobalStyle = createGlobalStyle`
 
     .col-lg-4 {
         @media (min-width: 992px) {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+
+    .col-lg-5 {
+        @media (min-width: 992px) {
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+        }
+    }
+
+    .col-lg-7 {
+        @media (min-width: 992px) {
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+        }
+    }
+
+    .col-lg-8 {
+        @media (min-width: 992px) {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+        }
+    }
+
+    .col-md-6 {
+        @media (min-width: 768px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    .col-md-12 {
+        @media (min-width: 768px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .col-md-4 {
+        @media (min-width: 768px) {
             -ms-flex: 0 0 33.333333%;
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
         }
     }
 
-    .col-lg-8 {
-        @media (min-width: 992px) {
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-        }
-    }
-
     .col-12 {
-        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        margin-bottom: .8rem;
+        font-family: "Poppins";
+        display: block;
+        font-weight: 600;
+    }
+
+    button, input, optgroup, select, textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        outline: none;
+    }
+
+    button, input {
+        overflow: visible;
+    }
+
+    textarea {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    input[type=text] {
+        height: 54px;
+        border: 1px solid #eaebee;
+        background: ${({ theme }) => theme.colors.white};
+        padding: 0 20px;
     }
 
     .section-title {

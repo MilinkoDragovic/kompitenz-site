@@ -50,7 +50,6 @@ const TechsWrapper = styled.div`
     padding: 4rem calc((100vw - 1300px) / 2);
     background: #c1c4ce;
     box-shadow: 0 15px 30px rgb(0 0 0 / 10%), 0 8px 30px rgb(0 0 0 / 10%);
-    margin-bottom: 60px;
 `;
 
 const TechsLogos = styled.div`

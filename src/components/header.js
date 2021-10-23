@@ -73,13 +73,16 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-  color: #000;
+  color: #505050;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-size: ${({ theme }) => theme.fontSize.md};
+  font-weight: 600;
   cursor: pointer;
+  font-family: "Poppins";
 `;
 
 const Bars = styled(FaBars)`

@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled, { keyframes, css } from 'styled-components/macro';
 import { Button } from './Button';
-import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
 
 
@@ -23,39 +22,6 @@ const slideIn = keyframes`
     to {
       transform: translateY(0);
     }
-`;
-
-const boxEnterAnimation = keyframes`
-  from {
-    transform: rotate(0);
-  }
-  20% {
-    transform: translateX(70vw);
-  }
-  50% {
-    transform: translateX(70vw) rotate(360deg) scale(2);
-    border-radius: 50%;
-  }
-  100% {
-    transform: translateX(70vw);
-  }
-`;
-
-const boxExitAnimation = keyframes`
-  from {
-    transform: translateX(70vw);
-  }
-  20% {
-    transform: translateX(70vw) rotate(360deg) scale(1.2);
-  }
-  50% {
-    transform: translateX(50vw) scale(1);
-    border-radius: 0;
-  }
-  100% {
-    transform: translateX(50vw) translateY(100vh) scale(0.2);
-    background: yellow;
-  }
 `;
 
 const HeroSection = styled.section`
@@ -81,12 +47,6 @@ const HeroSlide = styled.div`
     height: 100%;
 `;
 
-const activeSlider = css`
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-`;
-
 const HeroSliderWrapper = styled.div`
     transition: all 0.3s ease;
     position: absolute;
@@ -97,7 +57,6 @@ const HeroSliderWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: ${fadeIn} 1.2s, ${slideIn} 1.2s;
 
     &::before {
         content: '';
@@ -125,7 +84,7 @@ const HeroImage = styled(GatsbyImage)`
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    animation: ${fadeIn} 1.2s, ${slideIn} 1.2s;
+    animation: ${fadeIn} 1.2s;
 `;
 
 const HeroContent = styled.div`
@@ -137,19 +96,31 @@ const HeroContent = styled.div`
     width: calc(100% - 100px);
     color: #fff;
 
-    h1 {
-        font-size: clamp(1rem, 8vw, 2rem);
-        font-weight: 400;
-        text-transform: uppercase;
-        text-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
-        text-align: left;
-        margin-bottom: .8rem;
+    small {
+        display: block;
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: ${({ theme }) => theme.colors.dark_pink};
+        animation: ${fadeIn} 1s, ${slideIn} 1s;
     }
 
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        font-weight: 600;
+        text-transform: lowercase;
+        font-family: "Poppins";
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+        text-align: left;
+        margin-bottom: 1.6rem;
+        animation: ${fadeIn} 1.2s, ${slideIn} 1.2s;
+    }
 
     p {
-        margin-bottom: 1.2rem;
-        text-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+        margin-bottom: 1.6rem;
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        animation: ${fadeIn} 1.6s, ${slideIn} 1.6s;
+        letter-spacing: 1px;
     }
 `;
 
@@ -161,21 +132,18 @@ const SliderButtons = styled.div`
     z-index: 5;
 `;
 
-const Arrow = styled(IoMdArrowRoundForward)`
-    margin-left: .5rem;
-`;
 
 const arrowButtons = css`
     width: 50px;
     height: 50px;
     color: #fff;
     cursor: pointer;
-    background: #000d1a;
-    border-radius: 50px;
+    background: ${({ theme }) => theme.colors.text};
     padding: 10px;
     margin-right: 1rem;
     user-select: none;
     transition: .3s;
+    animation: ${fadeIn} 1s, ${slideIn} 1s;
 
     &:hover {
         background: #832e87;
@@ -194,6 +162,9 @@ const NextArrow = styled(IoArrowForward)`
 
 
 const HeroSlider = () => {
+    const [current, setCurrent] = useState(0);
+    const length = 4;
+    const timeout = useRef(null);
 
     useEffect(
         () => {
@@ -201,7 +172,7 @@ const HeroSlider = () => {
                setCurrent(current => (current === length - 1 ? 0 : current + 1));
            };
     
-           timeout.current = setTimeout(nextSlide, 3000);
+           timeout.current = setTimeout(nextSlide, 5000);
     
            return function() {
                 if (timeout.current) {
@@ -222,7 +193,11 @@ const HeroSlider = () => {
                 label
                 image {
                         childImageSharp {
-                            gatsbyImageData(formats: JPG)
+                            gatsbyImageData(
+                                width: 1920
+                                transformOptions: {grayscale: true}
+                                formats: [JPG]
+                            )
                         }
                     }
                 }
@@ -231,12 +206,6 @@ const HeroSlider = () => {
         }
     }`);
 
-    const [current, setCurrent] = useState(0);
-    const [isActive, setActive] = useState(true);
-    const length = 4;
-    const timeout = useRef(null);
-
-    
 
     const nextSlide = () => {
         if (timeout.current) {
@@ -254,13 +223,6 @@ const HeroSlider = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
- 
-
-    // const getActiveState = (index) => {
-    //     console.log(index);
-    //     setActive(current === index);
-    // }
-
     return (
         <HeroSection>
             <HeroWrapper>
@@ -271,15 +233,17 @@ const HeroSlider = () => {
                                 <HeroSliderWrapper>
                                     <HeroImage image={item.node.image.childImageSharp.gatsbyImageData} alt={item.node.alt} />
                                     <HeroContent>
+                                        <small>0{index}</small>
                                         <h1>{item.node.title}</h1>
+                                        <p>{item.node.label}</p>
                                         <Button
+                                            big="'true'"
                                             to={item.node.path}
-                                            primary='true'
                                             css={`
-                                                max-width: 190px;
+                                                width: 180px;
+                                                animation: ${fadeIn} 2s, ${slideIn} 2s;
                                             `}>
-                                            {item.node.label}
-                                            <Arrow />
+                                            Weiterlesen
                                         </Button>
                                     </HeroContent>
                                 </HeroSliderWrapper>

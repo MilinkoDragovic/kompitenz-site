@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Video from '../assets/videos/kompitenz-video.mp4'
 import ImageBg from '../assets/images/slider/hero-1.jpg'
 import SideIcon from '../assets/images/side-widget-icon.png'
-import { AiOutlinePlayCircle } from 'react-icons/ai';
 
 const SideImageContent = () => {
 
@@ -112,18 +111,6 @@ const LeftSideVideo = styled.video`
     float: left;
     margin-left: -30%;
     opacity: 0.4;
-`;
-
-const LeftSideVideoButton = styled.a`
-    display: inline-block;
-    margin: 0 auto;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    transition: all 0.5s;
-    z-index: 999;
-    font-size: 5rem;
-    color: ${({ theme }) => theme.colors.white};
 `;
 
 const SideImageIcon = styled.img`
