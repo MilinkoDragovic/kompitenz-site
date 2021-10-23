@@ -120,5 +120,6 @@ const DevelopmentWidgetLink = styled(Link)`
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: ${({ theme }) => theme.fontSize.xl}
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    color: ${({ theme }) => theme.colors.primary};
 `;
