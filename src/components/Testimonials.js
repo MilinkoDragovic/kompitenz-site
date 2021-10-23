@@ -25,16 +25,6 @@ const Testimonials = () => {
                     name
                     description
                     short
-                    imageLogo {
-                        childImageSharp {
-                            gatsbyImageData(
-                                webpOptions: {}
-                                pngOptions: {quality: 10, compressionSpeed: 10}
-                                transformOptions: {grayscale: true}
-                                height: 40
-                            )
-                        }
-                    }
                     image {
                         childImageSharp {
                             gatsbyImageData(
@@ -73,7 +63,6 @@ const Testimonials = () => {
                                     <TestimonialBlockquote>
                                         <p>{item.node.description}</p>
                                     </TestimonialBlockquote>
-                                    {/* <TestimonialLogoImage image={item.node.imageLogo.childImageSharp.gatsbyImageData} alt={item.node.name} /> */}
                                     <TestimonialSmallText>{item.node.short}</TestimonialSmallText>
                                 </Testimonial>
                             </SwiperSlide>
@@ -160,10 +149,6 @@ const Testimonial = styled.div`
 const TestimonialImage = styled(GatsbyImage)`
     border-radius: 10px;
     height: 100%;
-`;
-
-const TestimonialLogoImage = styled(GatsbyImage)`
-    height: 40px;
 `;
 
 const TestimonialContainer = styled.figure`

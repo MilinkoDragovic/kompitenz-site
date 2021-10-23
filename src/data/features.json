@@ -1,17 +1,22 @@
 [
     { 
-        "title": "Service 1",
-        "description": "The only time you should move your vehicles after you get in a wreck is if not doing",
+        "title": "Beratung",
+        "description": "Zielführende und praxisbezogene beratung...",
         "link": "/services"
     },
     { 
-        "title": "Service 2",
-        "description": "The reason you want your cars to remain where they are as closely as possible",
+        "title": "Web and mobile design",
+        "description": "Programmierung an ihren anforderungen ausgerichtet...",
         "link": "/services"
     },
     { 
-        "title": "Services 3",
-        "description": "Allowing word-of-mouth reporting from the other driver may not be the best idea",
+        "title": "Programmierung",
+        "description": "Ihr design in transparenten schritten implementieren...",
+        "link": "/services"
+    },
+    { 
+        "title": "Support",
+        "description": "Support - garantiert ihnen einen sorgenfreien betrieb...",
         "link": "/services"
     }
 ]

@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const FeatureServices = () => {
     const data = useStaticQuery(graphql`
@@ -26,7 +27,9 @@ const FeatureServices = () => {
                             <span></span>
                             <h3>{item.node.title}</h3>
                             <p>{item.node.description}</p>
-                            <FeatureServicesLink to="/about">Contact</FeatureServicesLink>
+                            <FeatureServicesLink to={item.node.link}>
+                                <AiOutlineArrowRight />
+                            </FeatureServicesLink>
                         </FeatureServiceContentBox>
                     ))}
                 </FeatureServicesContent>
@@ -63,11 +66,18 @@ const FeatureServiceContentBox = styled.div`
     margin-right: 30px;
     border-right: 1px solid #eaebee;
 
+    &:last-of-type {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+    }
+
     h3 {
         display: block;
-        font-weight: 700;
-        color: ${({ theme }) => theme.colors.primary};;
-        font-size: 25px;
+        font-weight: 600;
+        font-family: "Poppins";
+        color: ${({ theme }) => theme.colors.primary};
+        font-size: ${({ theme }) => theme.fontSize.lg};
         margin-bottom: 15px;
     }
 
