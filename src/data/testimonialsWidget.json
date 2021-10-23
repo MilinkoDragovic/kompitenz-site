@@ -1,0 +1,30 @@
+[
+    { 
+        "name": "Tanja Rörsch",
+        "description": "Kompitenz ist der starke Partner an unserer Startup-Seite! Wer eine neue, branchenverändernde digitale Plattform wie mein-buchprojekt.de aufbaut, braucht dieses IT-Team aus absoluten Profis, die ihr Handwerk verstehen und neue Bedürfnisse des Marktes und der User galant umsetzen. Besonders gefällt uns die Vielfalt und verschiedenen Expertisen innerhalb des Teams, die gerade bei komplexen Plattformen notwendig ist.",
+        "image": "../assets/images/testimonials/mbp.jpg",
+        "imageLogo": "../assets/images/projects/mbp-logo.png",
+        "short": "Geschäftsführerin"
+    },
+    { 
+        "name": "Patrick Prior",
+        "description": "Ich bin sehr zufrieden mit der Arbeit der Firma Kompitenz. Sie sind kompetent, freundlich, sehr bemüht und immer gut erreichbar.",
+        "image": "../assets/images/testimonials/uaa.jpg",
+        "imageLogo": "../assets/images/projects/uaa-logo.png",
+        "short": "Geschäftsführer"
+    },
+    { 
+        "name": "Andreas Linden",
+        "description": "To reach a defined goal it is essential that IT understands it’s customers business. Kompitenz does this… perfectly.",
+        "image": "../assets/images/testimonials/lateral.jpg",
+        "imageLogo": "../assets/images/projects/lateral-logo.png",
+        "short": "Inhaber & Geschäftsführer"
+    },
+    { 
+        "name": "Markus Pasch",
+        "description": "Die Zusammenarbeit mit Kompitenz verlief sehr positiv, da einerseits entsprechende Designwünsche zeitnah umgesetzt wurden und andererseits der kreative Input seitens Kompitenz zu einem tollen Resultat geführt haben.",
+        "image": "../assets/images/testimonials/certis.png",
+        "imageLogo": "../assets/images/projects/certis-logo.png",
+        "short": "Geschäftsführer"
+    }
+]

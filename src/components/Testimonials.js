@@ -1,78 +1,85 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GatsbyImage } from "gatsby-plugin-image";
-import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
-import { FaRegLightbulb } from 'react-icons/fa';
+import { RiDoubleQuotesR } from 'react-icons/ri';
 import { useStaticQuery, graphql } from 'gatsby';
+import TestemonialBg from '../assets/images/world-map.png'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation"
+
+import SwiperCore, {
+    Navigation, Mousewheel, Keyboard
+  } from 'swiper';
+  
+SwiperCore.use([Navigation,Mousewheel,Keyboard]);
+
 
 const Testimonials = () => {
     const data = useStaticQuery(graphql`
-    query {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"},
-            name: {in: ["testimonial-1", "testimonial-2"]}}) {
-                edges {
-                    node {
+    {
+        allTestimonialsWidgetJson {
+            edges {
+                node {
+                    name
+                    description
+                    short
+                    imageLogo {
                         childImageSharp {
                             gatsbyImageData(
-                                width: 800
-                                formats: [AUTO, WEBP, AVIF]
+                                webpOptions: {}
+                                pngOptions: {quality: 10, compressionSpeed: 10}
+                                transformOptions: {grayscale: true}
+                                height: 40
+                            )
+                        }
+                    }
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(
+                                webpOptions: {}
+                                pngOptions: {quality: 10, compressionSpeed: 10}
+                                transformOptions: {grayscale: true}
+                                width: 80
                             )
                         }
                     }
                 }
             }
         }
-    `);
-
-    const imageAlt = [
-        "Milinko",
-        "Aleksandra"
-    ];
+    }
+  `);
 
     return (
         <TestimonialsContainer>
-            <TopLine>
-                Testimonials
-            </TopLine>
-            <Description>
-                What people think about LogicLab
-            </Description>
-            <ContentWrapper>
-                <ColumnOne>
-                    <Testimonial>
-                        <IoMdCheckmarkCircleOutline 
-                            css={`
-                                color: #3fffa8;
-                                font-size: 2rem;
-                                margin-bottom: 1rem;
-                            `}
-                        />
-                        <h3>Milinko Dragovic</h3>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-                    </Testimonial>
-                    <Testimonial>
-                        <FaRegLightbulb 
-                            css={`
-                                color: #f9b19b;
-                                font-size: 2rem;
-                                margin-bottom: 1rem;
-                            `}
-                        />
-                        <h3>Aleksandra Skrbic</h3>
-                        <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam,
-                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."</p>
-                    </Testimonial>
-                </ColumnOne>
-                <ColumnTwo>
-                    {data.allFile.edges.map((item, index) => (
-                        <Images key={index} alt={imageAlt[index]} image={item.node.childImageSharp.gatsbyImageData} />
-                    ))}
-                </ColumnTwo>
-            </ContentWrapper>
+            <div className="container">
+                <div className="section-title">
+                    <span>05</span>
+                    <h2><strong>was sagen</strong>  die Völker!</h2>
+                </div>
+
+                <Swiper slidesPerView={1} navigation={true} spaceBetween={20} centeredSlides={true}
+                    className="swiper-testimonials">
+                        {data.allTestimonialsWidgetJson.edges.map((item, index) => (
+                            <SwiperSlide>
+                                <Testimonial>
+                                    <TestimonialContainer>
+                                        <TestimonialImage image={item.node.image.childImageSharp.gatsbyImageData} alt={item.node.name} />
+                                        <TestimonialContent>
+                                            <TestimonialIcon></TestimonialIcon>
+                                        </TestimonialContent>
+                                    </TestimonialContainer>
+                                    <TestimonialBlockquote>
+                                        <p>{item.node.description}</p>
+                                    </TestimonialBlockquote>
+                                    {/* <TestimonialLogoImage image={item.node.imageLogo.childImageSharp.gatsbyImageData} alt={item.node.name} /> */}
+                                    <TestimonialSmallText>{item.node.short}</TestimonialSmallText>
+                                </Testimonial>
+                            </SwiperSlide>
+                        ))}
+                </Swiper>
+            </div>
         </TestimonialsContainer>
     )
 }
@@ -81,69 +88,128 @@ export default Testimonials
 
 const TestimonialsContainer = styled.div`
     width: 100%;
-    background: #fcfcfc;
-    color: #000;
-    padding: 5rem calc((100vw - 1300px) / 2);
-    height: 100%;
-`;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 0;
+    background: url(${TestemonialBg}) center no-repeat ${({ theme }) => theme.colors.primary};
+    text-align: center;
+    color: #fff;
+    background-size: auto 80%;
 
-const TopLine = styled.p`
-    color: #077bf1;
-    font-size: 1rem;
-    padding-left: 2rem;
-    margin-bottom: .75rem;
-`;
-
-const Description = styled.p`
-    text-align: left;
-    padding-left: 2rem;
-    margin-bottom: 4rem;
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    font-weight: bold;
-`;
-
-const ContentWrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
+    .swiper-slide {
+        background: transparent;
     }
-`;
 
-const ColumnOne = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        background: ${({ theme }) => theme.colors.primary};
+        padding: 10px;
+        transition: all .3s ease;
+
+        &:hover {
+            background: ${({ theme }) => theme.colors.dark_pink};
+        }
+
+        &:after {
+            color: ${({ theme }) => theme.colors.white};
+            font-size: ${({ theme }) => theme.fontSize['3xl']};
+        }
+    }
+
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: ${({ theme }) => theme.colors.primary};
+        padding: 10px;
+        transition: all .3s ease;
+
+        &:hover {
+            background: ${({ theme }) => theme.colors.dark_pink};
+        }
+
+        &:after {
+            color: ${({ theme }) => theme.colors.white};
+            font-size: ${({ theme }) => theme.fontSize['3xl']};
+        }
+    }
+
+    .section-title {
+        margin-bottom: 0;
+
+        h2 {
+            color: ${({ theme }) => theme.colors.white};
+            strong {
+                opacity: .65;
+            }
+        }
+
+        h6 {
+            color: ${({ theme }) => theme.colors.white};
+            line-height: 1.6;
+        }
+    }
 `;
 
 const Testimonial = styled.div`
-    padding-top: 1rem;
-    padding-right: 2rem;
-
-    h3 {
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-        font-style: italic;
-    }
-
-    p {
-        color: #3b3b3b;
-    }
+    width: 100%;
+    flex: 1;
+    padding: 0 12%;
 `;
 
-const ColumnTwo = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
-    grid-gap: 10px;
-
-    @media screen and (max-width: 500px) {
-        grid-template-columns: 1fr;
-    }
-`;
-
-const Images = styled(GatsbyImage)`
+const TestimonialImage = styled(GatsbyImage)`
     border-radius: 10px;
     height: 100%;
+`;
+
+const TestimonialLogoImage = styled(GatsbyImage)`
+    height: 40px;
+`;
+
+const TestimonialContainer = styled.figure`
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+
+    ${TestimonialImage} {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+`;
+
+const TestimonialContent = styled.figcaption`
+    width: 30px;
+    height: 30px;
+    background: ${({ theme }) => theme.colors.dark_pink};
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -15px;
+`;
+
+const TestimonialIcon = styled(RiDoubleQuotesR)`
+    width: 15px;
+    margin: 8px;
+    font-size: 1rem;
+`;
+
+const TestimonialBlockquote = styled.blockquote`
+    display: block;
+    margin-bottom: 30px;
+
+    p {
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        line-height: 1.5;
+        color: ${({ theme }) => theme.colors.white};
+        margin: 0;
+        letter-spacing: 1px;
+    }
+`;
+
+const TestimonialSmallText = styled.small`
+    display: block;
+    margin: 10px 0;
+    opacity: .7;
 `;

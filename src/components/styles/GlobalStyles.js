@@ -43,6 +43,11 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box; 
     }
 
+    .small, small {
+        font-size: 80%;
+        font-weight: 400;
+    }
+
     .container {
         width: 100%;
         padding-right: 15px;

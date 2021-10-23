@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
+import styled from 'styled-components';
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import styled from 'styled-components';
 
 import "swiper/css";
 import "swiper/css/navigation"

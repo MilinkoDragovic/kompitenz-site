@@ -15,10 +15,6 @@ const SideImageContent = () => {
                     <LeftSideVideo src={Video} type="video/mp4" autoPlay muted loop></LeftSideVideo>
                 </SideImageContentLeftSideVideo>
 
-                <LeftSideVideoButton href={Video}>
-                    <AiOutlinePlayCircle></AiOutlinePlayCircle>
-                </LeftSideVideoButton>
-
             </SideImageContentSide>
             <SideImageContentSide>
                 <SideImageContentSideInner>
@@ -56,7 +52,7 @@ const SideImageContentSide = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 120px 0;
+    padding: 100px 0;
     background-size: cover !important;
     position: relative;
     background-color: ${({ theme }) => theme.colors.primary};
@@ -85,7 +81,7 @@ const SideImageContentSideInner = styled.div`
     p {
         color: ${({ theme }) => theme.colors.white};
         line-height: 1.6;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
 
     img {
