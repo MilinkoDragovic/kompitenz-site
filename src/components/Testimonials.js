@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GatsbyImage } from "gatsby-plugin-image";
 import { RiDoubleQuotesR } from 'react-icons/ri';
 import { useStaticQuery, graphql } from 'gatsby';
-import TestemonialBg from '../assets/images/world-map.png'
+import TestimonialBg from '../assets/images/world-map.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -80,7 +80,7 @@ const TestimonialsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 120px 0;
-    background: url(${TestemonialBg}) center no-repeat ${({ theme }) => theme.colors.primary};
+    background: url(${TestimonialBg}) center no-repeat ${({ theme }) => theme.colors.primary};
     text-align: center;
     color: #fff;
     background-size: auto 80%;

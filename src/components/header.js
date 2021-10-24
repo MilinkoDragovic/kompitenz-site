@@ -1,11 +1,10 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { FaBars } from "react-icons/fa"
-import { menuData } from "../data/MenuData"
-// import TextAnimation from "./TextAnimation"
-import SocialMedia from "./SocialMedia"
-import TopBarPhone from "./TopBarPhone"
+import * as React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { FaBars } from "react-icons/fa";
+import { menuData } from "../data/MenuData";
+import SocialMedia from "./SocialMedia";
+import TopBarPhone from "./TopBarPhone";
 import Logo from "../assets/images/logo.svg";
 
 const Header = ({ toggle }) => {
@@ -15,7 +14,6 @@ const Header = ({ toggle }) => {
         <TagLine>
           Obwohl: Niemand möchte zurückgestoßen oder gesagt werden, dass seine Idee nicht umsetzbar ist
         </TagLine>
-        {/* <TextAnimation /> */}
         <SocialMedia />
         <TopBarPhone />
       </TopBarWrapper>
@@ -143,7 +141,7 @@ const NavLink = styled(Link)`
 
 const Bars = styled(FaBars)`
   display: none;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
 
   @media screen and (max-width: 768px) {
     display: block;

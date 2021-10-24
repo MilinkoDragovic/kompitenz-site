@@ -179,6 +179,13 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .col-lg-6 {
+        @media (min-width: 992px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
     .col-lg-7 {
         @media (min-width: 992px) {
             flex: 0 0 58.333333%;
@@ -262,6 +269,18 @@ export const GlobalStyle = createGlobalStyle`
 
     textarea {
         border: 1px solid #eaebee;
+    }
+
+    .breadcrumb {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        list-style: none;
+        background-color: #e9ecef;
+        border-radius: 0.25rem;
     }
 
     .section-title {

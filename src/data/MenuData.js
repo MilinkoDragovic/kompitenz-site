@@ -1,11 +1,11 @@
 export const menuData = [
     { 
-        title: "Unternehmen",
+        title: "Home",
         link: "/"
     },
     { 
         title: "Wieso Kompitenz",
-        link: "/services"
+        link: "/about"
     },
     { 
         title: "Leistungen",
