@@ -20,9 +20,9 @@ const Header = ({ toggle }) => {
         <TopBarPhone />
       </TopBarWrapper>
       <Nav>
-        <NavLink to="/">
+        <NavLinkLogo to="/">
           <ImgLogo alt="Kompitenz Logo" src={Logo} /> 
-        </NavLink>
+        </NavLinkLogo>
         <Bars onClick={toggle} />
         <NavMenu>
           {menuData.map((item, index) => (
@@ -72,7 +72,7 @@ const Nav = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLinkLogo = styled(Link)`
   color: #505050;
   display: flex;
   align-items: center;
@@ -83,6 +83,62 @@ const NavLink = styled(Link)`
   font-weight: 600;
   cursor: pointer;
   font-family: "Poppins";
+`;
+
+const NavLink = styled(Link)`
+  color: #505050;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  font-size: ${({ theme }) => theme.fontSize.md};
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins";
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 6px;
+    width: 0;
+    transition: width 0s ease, background 0.25s ease;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    height: 6px;
+    width: 0;
+    background: ${({ theme }) => theme.colors.primary};
+    transition: width .25s ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &:before {
+      width: 100%;
+      background: ${({ theme }) => theme.colors.primary};
+      transition: width .25s ease;
+    }
+
+    &:after {
+      width: 100%;
+      background: transparent;
+      transition: all 0s ease;
+    }
+  }
 `;
 
 const Bars = styled(FaBars)`
