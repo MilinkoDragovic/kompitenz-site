@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
 
     *, *:before, *:after {
         box-sizing: border-box;
+        outline: none !important;
     }
 
     html, body {
@@ -110,9 +111,26 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
     }
 
+    dl, ol, ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
     p {
         line-height: 1.5;
         color:  ${({ theme }) => theme.colors.paragraph};
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+
+    .h3, h3 {
+        font-size: 1.75rem;
     }
 
     .row {
@@ -131,6 +149,21 @@ export const GlobalStyle = createGlobalStyle`
         padding-right: 15px;
         padding-left: 15px;
     }
+
+    .col-md-6 {
+        @media (min-width: 768px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    .col-lg-2 {
+        @media (min-width: 992px) {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+    }
+    
 
     .col-lg-4 {
         @media (min-width: 992px) {
@@ -160,13 +193,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    .col-md-6 {
-        @media (min-width: 768px) {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-    }
-
     .col-md-12 {
         @media (min-width: 768px) {
             flex: 0 0 100%;
@@ -189,6 +215,18 @@ export const GlobalStyle = createGlobalStyle`
 
     .form-group {
         margin-bottom: 1.5rem;
+    }
+
+    a {
+        color: ${({ theme }) => theme.colors.primary};
+        transition: 0.25s ease-in-out;
+        text-decoration: none;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: underline;
+            color: ${({ theme }) => theme.colors.secondary}
+        }
     }
 
     label {
@@ -220,6 +258,10 @@ export const GlobalStyle = createGlobalStyle`
         border: 1px solid #eaebee;
         background: ${({ theme }) => theme.colors.white};
         padding: 0 20px;
+    }
+
+    textarea {
+        border: 1px solid #eaebee;
     }
 
     .section-title {

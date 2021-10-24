@@ -20,5 +20,6 @@ export const Button = styled(Link)`
         background: ${({ primary }) => (primary ? ({ theme }) => theme.colors.secondary : 'transparent')};
         border: 2px solid ${({ primary }) => (primary ? ({ theme }) => theme.colors.primary : ({ theme }) => theme.colors.primary )};
         transform: translateY(-2px);
+        text-decoration: none;
     }
 `;
