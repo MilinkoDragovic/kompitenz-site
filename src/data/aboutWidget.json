@@ -1,0 +1,27 @@
+[
+    { 
+        "title": "Focus: Digitale Welt",
+        "description": "Digitale Geschäftsmodelle (ausgerichtet an Bedürfnisse von Kunden, Lieferanten etc.) spielen eine immer größer werdende Rolle. Als Ideengeber liefern wir Ihnen innovative und kreative Impulse und unterstützen Sie aktiv bei der digitalen Transformation.",
+        "image": "../assets/images/about/about-1.png"
+    },
+    { 
+        "title": "Agile Vorgehensweise",
+        "description": "Wir nutzen agile Methoden (SCRUM) und Tools (Jira / Confluence), sodass Sie von Beginn an voll im Bild sind. Sie sind bei der Entstehung Ihrer individuellen Softwarelösung hautnah dabei.",
+        "image": "../assets/images/about/about-2.png"
+    },
+    { 
+        "title": "Rasante Umsetzung",
+        "description": "Zeit ist bekanntlich Geld, deshalb nutzen wir den zur Verfügung stehenden Zeitrahmen ideal aus. Innerhalb weniger Wochen stellen wir den ersten Prototypen bzw. Ergebnisse bereit.",
+        "image": "../assets/images/about/about-5.png"
+    },
+    { 
+        "title": "Moderne Technologien",
+        "description": "Wir setzen sowohl neue als auch etablierte Frameworks und Programmiersprachen (Open Source) ein, mit denen sich vielschichtige und komplexe Anforderungen im Bereich Webentwicklung, MobileApp Entwicklung, Machine Learning / Künstliche Intelligenz usw. umsetzen lassen.",
+        "image": "../assets/images/about/about-3.png"
+    },
+    { 
+        "title": "Wirtschaftlich & Rentabel",
+        "description": "Der Austausch digitalisierter Informationen und Daten nimmt immer stärker zu. Wie gehen Sie mit personenbezogenen Daten um (Datenschutz / DSGVO)? Was unternehmen Sie in Bezug auf IT Sicherheit? Wie stellen Sie die Integrität, Vertraulichkeit und Verfügbarkeit der Daten sicher?",
+        "image": "../assets/images/about/about-4.png"
+    }
+]
