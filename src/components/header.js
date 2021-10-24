@@ -169,12 +169,15 @@ const NavMenu = styled.div`
 const NavBtn = styled.ul`
   display: flex;
   align-items: center;
+  margin: 0;
   margin-right: 24px;
 
   li {
     margin: 0 5px;
     padding: 0;
     list-style: none;
+    line-height: 80px;
+    height: 80px;
 
     span {
       font-weight: 600;
