@@ -35,9 +35,50 @@ const PrivacyPolicy = () => (
                 <div className="section-title">
                     <span>01</span>
                     <h2>Informationen über uns als Verantwortliche</h2>
-                    <h6>
-                        Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist :
-                    </h6>
+                    <ParagraphSection>
+                        Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:
+
+                        <ul>
+                            <li><span>Kompitenz GmbH <br/> Herr Darko Turajlic <br/> Bachstraße 14 <br/> 69121 Heidelberg </span></li>
+                        </ul>
+                    </ParagraphSection>
+                </div>
+            </div>
+            <div className="col-12 mt-2">
+                <div className="section-title">
+                    <span>02</span>
+                    <h2>Rechte der Nutzer und Betroffenen</h2>
+                    <ParagraphSection>
+                        Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung haben die Nutzer und Betroffenen das Recht
+                        auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft über die verarbeiteten Daten, auf weitere Informationen über die Datenverarbeitung sowie auf Kopien der Daten (vgl. auch Art. 15 DSGVO);
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten (vgl. auch Art. 16 DSGVO);
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        auf unverzügliche Löschung der sie betreffenden Daten (vgl. auch Art. 17 DSGVO), oder, alternativ, soweit eine weitere Verarbeitung gemäß Art. 17 Abs. 3 DSGVO erforderlich ist, auf Einschränkung der Verarbeitung nach Maßgabe von Art. 18 DSGVO;
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        auf Erhalt der sie betreffenden und von ihnen bereitgestellten Daten und auf Übermittlung dieser Daten an andere Anbieter/Verantwortliche (vgl. auch Art. 20 DSGVO);
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht sind, dass die sie betreffenden Daten durch den Anbieter unter Verstoß gegen datenschutzrechtliche Bestimmungen verarbeitet werden (vgl. auch Art. 77 DSGVO).
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede Berichtigung oder Löschung von Daten oder die Einschränkung der Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese Empfänger.
+                    </ParagraphSection>
+                    <ParagraphSection>
+                        Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.
+                    </ParagraphSection>
+                </div>
+            </div>
+            <div className="col-12 mt-2">
+                <div className="section-title">
+                    <span>03</span>
+                    <h2>Informationen zur Datenverarbeitung</h2>
+                    <ParagraphSection>
+                        Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen und nachfolgend keine anderslautenden Angaben zu einzelnen Verarbeitungsverfahren gemacht werden.
+                    </ParagraphSection>      
                 </div>
             </div>
         </div>
@@ -69,6 +110,10 @@ const ParagraphSection = styled.div`
             }
 
             span {
+                font-size: 1rem;
+                color: #999999;
+                line-height: 1.6;
+                font-weight: 400;
                 margin-left: .75rem;
             }
         }
