@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { menuData } from "../data/MenuData";
-import SocialMedia from "./SocialMedia";
 import TopBarPhone from "./TopBarPhone";
 import Logo from "../assets/images/logo.svg";
 
@@ -11,10 +10,6 @@ const Header = ({ toggle }) => {
   return (
     <TopNavBar>
       <TopBarWrapper>
-        <TagLine>
-          Obwohl: Niemand möchte zurückgestoßen oder gesagt werden, dass seine Idee nicht umsetzbar ist
-        </TagLine>
-        <SocialMedia />
         <TopBarPhone />
       </TopBarWrapper>
       <Nav>
@@ -205,6 +200,10 @@ const TopNavBar = styled.div`
   height: 64px;
   z-index: 10;
   top: 0;
+
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
 const TopBarWrapper = styled.div`
@@ -214,6 +213,11 @@ const TopBarWrapper = styled.div`
   margin: 0 2rem;
   flex-wrap: wrap;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    margin: 0 0.5rem;
+  }
 `;
 
 const TagLine = styled.span`

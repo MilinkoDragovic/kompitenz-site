@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kompitenz`,
-    description: `Wir sind ein dynamisches und innovatives Unternehmen, das sich den Herausforderungen des digitalen Wandels stellt und Sie bei der Transformation vollumfänglich begleitet.`,
+    description: `Wir sind ein dynamisches und innovatives Unternehmen, das die Herausforderungen des digitalen Wandels vollumfänglich begleitet und umsetzt.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },

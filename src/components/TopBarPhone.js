@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineMobile } from 'react-icons/ai';
+import SocialMedia from "./SocialMedia";
 
 const TopBarPhone = () => {
     return (
         <TopBarPhoneContainer>
+            <SocialMedia />
             <PhoneIcone />
             <PhoneNumber>
                 <b>DE</b>
@@ -25,7 +27,7 @@ const TopBarPhoneContainer = styled.div`
 
 const PhoneIcone = styled(AiOutlineMobile)`
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: -1px;
     margin-right: 7px;
 `;

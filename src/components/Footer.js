@@ -15,7 +15,7 @@ const Footer = () => {
                         <FooterContentBoxIcon>
                             <MdOutlineShareLocation />
                         </FooterContentBoxIcon>
-                        <h3>Adressinfo</h3>
+                        <h3>Adresse</h3>
                         <p>Bachstraße 14, 69121 Heidelberg</p>
                     </FooterContentBox>
 
@@ -23,15 +23,15 @@ const Footer = () => {
                         <FooterContentBoxIcon>
                             <HiOutlineClock />
                         </FooterContentBoxIcon>
-                        <h3>Arbeitszeit</h3>
-                        <p>Montag bis Freitag 08:00 bis 16:30</p>
+                        <h3>Verfügbarkeit</h3>
+                        <p>Montag bis Freitag von 08:30 Uhr bis 17:30 Uhr</p>
                     </FooterContentBox>
 
                     <FooterContentBox>
                         <FooterContentBoxIcon>
                             <MdOutlineMail />
                         </FooterContentBoxIcon>
-                        <h3>Kontaktiere uns</h3>
+                        <h3>E-Mail</h3>
                         <p>unter <span>info@kompitenz.de</span></p>
                     </FooterContentBox>
                 </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                         <div className="col-lg-4">
                             <FooterContentLogo src={WhiteLogo} />
                             <p>
-                                Wir sind ein dynamisches und innovatives Unternehmen, das sichdenrausorderungen des digitalen Wandels ollumfänglich begleitet.
+                                Wir sind ein dynamisches und innovatives Unternehmen, das die Herausforderungen des digitalen Wandels vollumfänglich begleitet und umsetzt.
                             </p>
                         </div>
                         <div className="col-lg-2 col-md-6">
@@ -82,26 +82,12 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-4">
                             <FooterContactBox>
-                                <h5>Ruf uns an</h5>
+                                <h5>Telefon</h5>
                                 <h3>+49 6221 1877950</h3>
-                                <p>
-                                    E-Mail 
-                                    <a href="/"> info@kompitenz.de</a>
-                                </p>
                                 <ul>
                                     <li>
-                                        <a href="/">
-                                            <FaFacebookF />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
+                                        <a href="https://www.linkedin.com/company/kompitenz" target="_blank">
                                             <FaLinkedinIn />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <FaXing />
                                         </a>
                                     </li>
                                 </ul>
@@ -113,10 +99,10 @@ const Footer = () => {
             <SubFooter>
                 <div className="container">
                     <SubFooterCopyright>
-                        © 2021 Alle Rechte vorbehalten, Kompitenz.
+                        © 2022 Alle Rechte vorbehalten, Kompitenz GmbH
                     </SubFooterCopyright>
                     <SubFooterPrivacyPolicy>
-                        <a href="/">Impressum</a> / <a href="/">Datenschutz</a>
+                        <a href="/privacy-policy">Impressum / Datenschutz</a>
                     </SubFooterPrivacyPolicy>
                 </div>
             </SubFooter>
@@ -253,6 +239,7 @@ const FooterContactBox = styled.div`
         float: right;
         margin: 0;
         padding: 0;
+        margin-top: 1rem;
 
         li {
             float: left;

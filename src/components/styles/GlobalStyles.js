@@ -318,4 +318,16 @@ export const GlobalStyle = createGlobalStyle`
             margin-bottom: 0;
         }
     }
+
+    .mt-1 {
+        margin-top: 1rem;
+    }
+
+    .mt-2 {
+        margin-top: 2rem;
+    }
+
+    .mb-1 {
+        margin-bottom: 1rem;
+    }
 `;

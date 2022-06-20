@@ -21,12 +21,8 @@ const SocialMedia = () => {
 export default SocialMedia
 
 const SocialMediaWrapper = styled.div`
-  margin: 0 auto;
   padding: 0;
-
-  @media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
-    margin-left: 0;  
-  }
+  margin-right: 1rem;
 `;
 
 const SocialMediaItem = styled.li`
