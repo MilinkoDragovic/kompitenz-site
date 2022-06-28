@@ -48,7 +48,7 @@ const Impressum = () => {
                             </ParagraphSection>
                             <ParagraphSection>
                                 Unsere E-Mail lautet:<br/>
-                                <a href="mailto:info@kompitenz.de" target="_blank" rel="noopener">info@kompitenz.de</a>
+                                <a href="mailto:info@kompitenz.de" target="_blank">info@kompitenz.de</a>
                             </ParagraphSection>
                             <ParagraphSection>
                                 Wir weisen aber darauf hin, dass wir nicht bereit sind, uns am Streitbeilegungsverfahren im Rahmen der Europäischen Online-Streitbeilegungs-Plattform zu beteiligen. Nutzen Sie zur Kontaktaufnahme bitte unsere obige E-Mail und Telefonnummer.

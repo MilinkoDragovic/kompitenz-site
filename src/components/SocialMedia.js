@@ -8,7 +8,7 @@ const SocialMedia = () => {
             {SocialMediaData.map((item, index) => {
                 return (
                     <SocialMediaItem key={index}>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                        <a href={item.link} target="_blank">
                             <Icon>{item.icon}</Icon>
                         </a>
                     </SocialMediaItem>
