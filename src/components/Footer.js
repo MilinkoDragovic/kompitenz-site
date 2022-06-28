@@ -102,7 +102,7 @@ const Footer = () => {
                         © 2022 Alle Rechte vorbehalten, Kompitenz GmbH
                     </SubFooterCopyright>
                     <SubFooterPrivacyPolicy>
-                        <a href="/privacy-policy">Impressum / Datenschutz</a>
+                        <a href="/impressum">Impressum</a> / <a href="/privacy-policy">Datenschutz</a>
                     </SubFooterPrivacyPolicy>
                 </div>
             </SubFooter>
@@ -158,6 +158,8 @@ const FooterContentBox = styled.div`
         display: block;
         color: #9aa0ae;
         margin: 0;
+        font-size: 14px;
+
 
         span {
             color: ${({ theme }) => theme.colors.primary}

@@ -159,8 +159,6 @@ const NextArrow = styled(IoArrowForward)`
     ${arrowButtons}
 `;
 
-
-
 const HeroSlider = () => {
     const [current, setCurrent] = useState(0);
     const length = 4;
@@ -250,11 +248,6 @@ const HeroSlider = () => {
                                 )}
                         </HeroSlide>
                    )
-                  
-                          
-                        
-                    
-                   
                 })}
                 <SliderButtons>
                     <PrevArrow onClick={prevSlide} />
